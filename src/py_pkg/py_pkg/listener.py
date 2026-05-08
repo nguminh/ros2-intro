@@ -5,8 +5,8 @@ from example_interfaces.msg import String
  
 class Listener(Node): 
     def __init__(self):
-        super().__init__("listener")
-        self.get_logger().info("Listener has been started.")
+        super().__init__("py_listener")
+        self.get_logger().info("Python listener has been started.")
         self._subscriber = self.create_subscription(String, "sc_robo", self.callback_sc_robo, 10)
  
     def callback_sc_robo(self, msg: String):
